@@ -1,136 +1,113 @@
 # Collabsphere
 
-Collabsphere is a vibrant space where people from diverse backgrounds and interests come together to engage in meaningful conversations, fostering an environment rich in idea exchange, knowledge sharing, and diverse experiences.
+Collabsphere is a MERN-based collaboration platform where users can share posts, manage tasks, publish products, and interact through comments and reactions. The project is designed as a student/community focused space for idea sharing, productivity, and learning-oriented collaboration.
 
-# Preview
+## Features
 
-<img src="/preview.png">
-<a href="https://collabsphere.vercel.app" target="_blank">Live Preview</a> | <a href="https://collabsphere-server.vercel.app" target="_blank">Live API</a> | <a href="https://documenter.getpostman.com/view/27027258/2sA3dxEXJh" target="_blank">Postman</a>
+- User registration and login with JWT authentication
+- Role-based access for users and admins
+- User profile dashboard with activity statistics
+- Create and manage posts
+- Public post detail page with comments and reactions
+- Create and manage products
+- Product detail page with seller information
+- Drag-and-drop task management board
+- Admin dashboard with user management
+- Settings page with password update
+- Subscription page
 
-# Requirements
+## Tech Stack
 
-[Install Node On Your Device](https://nodejs.org/)
+### Frontend
 
-# How to Run
+- React
+- Vite
+- Material UI
+- React Router
+- Axios
+- React Hook Form
 
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
+- Multer
+
+## Project Structure
+
+```text
+Collabsphere/
+  client/     React frontend
+  server/     Express and MongoDB backend
 ```
-git clone https://github.com/masum184e/collabsphere.git
 
-# BACKEND
+## Getting Started
+
+### Requirements
+
+- Node.js
+- npm
+- MongoDB database
+
+### Backend Setup
+
+```bash
 cd server
 npm install
-npx nodemon index.js
+npm start
+```
 
-# FRONTEND
-cd ../client
+### Frontend Setup
+
+```bash
+cd client
 npm install
 npm run dev
 ```
 
-# Environment Variables
+## Environment Variables
 
-## Frontend
+### Frontend
 
-```
-VITE_SERVER_ENDPOINT = https://collabsphere-server.vercel.app/api
-VITE_TOKEN_KEY = collabsphere
-VITE_USER_ROLE = role
-VITE_COOKIE_EXPIRES = 1
-```
+Create a `.env` file inside the `client` folder:
 
-## Backend
-
-```
-PORT = 3000
-DATABASE_URL = mongodb://localhost:27017/
-DATABASE_NAME = collabsphere
-BCRYPT_GEN_SALT_NUMBER = 10
-JWT_SECRET_KEY = abcdefghijklmnopqrstuvwxyz
-COOKIE_EXPIRES = 5d
-COOKIE_KEY = collabsphere
-UPLOAD_DIRECTORY = uploads
+```env
+VITE_SERVER_ENDPOINT=http://localhost:3000/api
+VITE_TOKEN_KEY=collabsphere
+VITE_USER_ROLE=role
+VITE_COOKIE_EXPIRES=1
 ```
 
-# Features
+### Backend
 
-## Admin
+Create a `.env` file inside the `server` folder:
 
-- Profile
-  - Last Month User Activity
-  - Role Based User Distribution
-- Users Management
-- Sign Out
-
-## Student
-
-- Profile
-- Add Post
-- My Posts
-- Add Product
-- My Products
-- Task Manager
-- Setting
-  - Change Password
-- Sign Out
-
-# Contribution Ideas
-
-- Continue with Google signup/signin
-- Single Product Sell Page
-- View Task Details
-- View User Details(public)
-- Edit user, post, product
-- Loading View
-
-## Institution/Teacher
-
-- post(text, image)
-  - by admin/institution
-  - by teacher
-- assignments
-- poll
-- resource sharing
-- test
-
-### Design Idea
-
-```
-|----------------------------------------------------------------
-|                 |                                |  Analytics |
-|-----------------|                                |------------|
-|                 |          ----------            |  Teachers  |
-|-----------------|          | Create |            |  Students  |
-|   Institution   |          ----------            |  Courses   |
-|-----------------|                                |    Posts   |
-|                 |                                |    ....    |
-|-----------------|--------------------------------|------------|
+```env
+PORT=3000
+DATABASE_URL=mongodb://localhost:27017/
+DATABASE_NAME=collabsphere
+BCRYPT_GEN_SALT_NUMBER=10
+JWT_SECRET_KEY=your_jwt_secret
+COOKIE_EXPIRES=5d
+COOKIE_KEY=collabsphere
+UPLOAD_DIRECTORY=uploads
 ```
 
-### Assignments
+## Future Improvements
 
-- title
-- description
-- subject
-- deadline
-- total marks
-- status
-- audience
+- Community feed for all public posts
+- Public user profiles
+- Follow/connect system
+- Assignment management
+- Polls
+- Resource sharing
+- Product inquiry or selling flow
+- Admin moderation for posts, products, and comments
 
-### Polls
+## Author
 
-- title
-- description
-- type(singl, multiple)
-- options
-- deadline
-- status
-- anonymous member
-- audience
-
-### Resource
-
-- title
-- description
-- visibility
-- url
-- audience
+Faiza
