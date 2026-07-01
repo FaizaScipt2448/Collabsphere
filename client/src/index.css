@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    * {
+        font-family: 'Platypi', serif !important;
+    }
+}
